@@ -1,4 +1,4 @@
-/*! JRoll-Vue-Infinite v0.1.0 ~ (c) 2016-2017 Author:BarZu Git:https://github.com/chjtx/JRoll/ */
+/*! JRoll-Vue-Infinite v0.1.1 ~ (c) 2016-2017 Author:BarZu Git:https://github.com/chjtx/JRoll/ */
 /* global JRoll */
 JRoll.VueInfinite = function (options, jrollOptions) {
   options = options || {}
@@ -50,6 +50,8 @@ JRoll.VueInfinite = function (options, jrollOptions) {
       page: function (p) {
         if (p === this.total) {
           this.tip = options.completeTip || '已全部加载完成'
+        } else {
+          this.tip = options.tip || '正在加载中...'
         }
       }
     }
